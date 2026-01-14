@@ -1,0 +1,54 @@
+/* Saytning eng pastki qismi (Footer) uchun umumiy dizayn */
+footer {
+    background-color: #1a1a1a; /* To'q qora fon */
+    color: #ffffff;            /* Matn rangi oq */
+    padding: 40px 0;           /* Teppa va pastdan joy tashlash */
+    text-align: center;        /* Hamma narsani markazga tekislash */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    border-top: 3px solid #444; /* Tepasidan ingichka chiziq */
+}
+
+/* "Biz bilan bog'laning" sarlavhasi */
+footer h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* Ijtimoiy tarmoq tugmalari uchun umumiy stil */
+.social-links a {
+    text-decoration: none;     /* Tagidagi chiziqni olib tashlash */
+    color: white;
+    margin: 10px 15px;
+    padding: 12px 25px;
+    border-radius: 50px;       /* Tugmalarni yumaloq qilish */
+    font-weight: 600;
+    display: inline-block;     /* Yonma-yon turishi uchun */
+    transition: all 0.3s ease; /* Effektlar silliq chiqishi uchun */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Soyasi */
+}
+
+/* Telegram tugmasi rangi */
+.telegram-btn {
+    background-color: #0088cc;
+}
+
+/* Instagram tugmasi rangi (Gradient) */
+.instagram-btn {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+/* Sichqoncha ustiga kelganda effekt */
+.social-links a:hover {
+    transform: translateY(-5px); /* Biroz tepaga ko'tariladi */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5); /* Soyasi kuchayadi */
+    filter: brightness(1.1);     /* Rang biroz yorishadi */
+}
+
+/* Pastdagi mualliflik huquqi matni */
+.copyright {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #888;
+}
