@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaxshi kayfiyat:)</title>
+    <div class="skills-section">
+    <h3>🚀 Mening mahoratlarim</h3>
+    
+    <div class="skill">
+        <span>HTML</span>
+        <div class="progress-bar"><div class="progress html">90%</div></div>
+    </div>
+
+    <div class="skill">
+        <span>CSS</span>
+        <div class="progress-bar"><div class="progress css">75%</div></div>
+    </div>
+
+    <div class="skill">
+        <span>Visual Studio Code</span>
+        <div class="progress-bar"><div class="progress vsc">85%</div></div>
+    </div>
+</div>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<div class="cursor-follower"></div>
+    <header>
+        <nav><button id="mode-toggle" class="dark-mode-btn">🌙 Tun rejimi</button>
+            <a href="../index.html"><i class="fas fa-home"></i> Bosh sahifa</a>
+            <a href="about-me.html"><i class="fas fa-user"></i> Men haqimda</a>
+        </nav>
+    </header>
+
+    <div class="container profile-card">
+        <div class="profile-header">
+            <div class="avatar">🚀</div> 
+            <h1>Salom, men <span id="typing-text"></span><span class="cursor">|</span></h1>
+            <p class="tagline">8-sinf o'quvchisi | IT Enthusiast</p>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-item">
+                <i class="fas fa-calendar-alt"></i>
+                <p><strong>Tug'ilgan kunim:</strong> 28-may, 2011-yil</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-laptop-code"></i>
+                <p><strong>Qiziqishlarim:</strong> IT sohasi va Dasturlash</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-language"></i>
+                <p><strong>Tillar:</strong> Ingliz tili (Yaxshi ko'raman!)</p>
+            </div>
+        </div>
+
+        <div class="bio">
+            <h3>Men haqimda qisqacha</h3>
+            <p>Men 2011-yilda tug'ilganman. Hozirda maktabda 8-sinfda o'qiyman. Bo'sh vaqtimda IT sohasini o'rganishni va ingliz tili darajamni oshirishni yaxshi ko'raman. Kelajakda kuchli dasturchi bo'lishni maqsad qilganman.</p>
+        </div>
+            <div class="photo-section">
+    <a href="#open-photo" class="photo-link">📸 Mening suratimni ko'rish</a>
+
+    <div id="open-photo" class="photo-overlay">
+        <div class="photo-content">
+            <a href="#" class="close-btn">&times;</a>
+            <img src="suwretler/mening-rasmim.jpg" alt="Mening suratim">
+            <p>Salom, bu men!</p>
+        </div>
+    </div>
+</div>
+
+        <div class="social-links">
+            <h3>Ijtimoiy tarmoqlarim</h3>
+            <p>Obuna bo'lsangiz xursand bo'laman: 😊</p>
+            <a href="https://t.me/qqr_freestylee_x" class="social-btn telegram" target="_blank">
+                <i class="fab fa-telegram"></i> Telegram kanal
+            </a>
+            <a href="https://t.me/kensi_solo" class="social-btn telegram" target="_blank">
+                <i class="fab fa-telegram"></i> Telegram acc
+            </a>
+            
+            <a href="https://instagram.com/qqr_freestylee_x" class="social-btn instagram" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Barcha huquqlar himoyalangan</p>
+    </footer>
+    <script> const modeToggle = document.getElementById('mode-toggle');
+const body = document.body;
+
+modeToggle.addEventListener('click', () => {
+    // Body-ga dark-theme klassini qo'shish yoki olib tashlash
+    body.classList.toggle('dark-theme');
+    
+    // Tugma matnini o'zgartirish
+    if (body.classList.contains('dark-theme')) {
+        modeToggle.innerText = "☀️ Kun rejimi";
+    } else {
+        modeToggle.innerText = "🌙 Tun rejimi";
+    }
+});
+    const follower = document.querySelector('.cursor-follower');
+
+    document.addEventListener('mousemove', (e) => {
+        // Sichqoncha harakatlanganda aylanani ko'rsatish
+        follower.style.display = 'block';
+        
+        // Aylananing o'rnini sichqoncha koordinatalariga moslash
+        follower.style.left = e.clientX + 'px';
+        follower.style.top = e.clientY + 'px';
+    });
+
+    // Sichqoncha sahifadan chiqib ketsa, aylana ham yo'qoladi
+    document.addEventListener('mouseleave', () => {
+        follower.style.display = 'none';
+    });
+    const textElement = document.getElementById('typing-text');
+const phrase = "Asadbekman!"; // Bu yerga ismingizni yozing
+let index = 0;
+
+function type() {
+    if (index < phrase.length) {
+        textElement.innerHTML += phrase.charAt(index);
+        index++;
+        setTimeout(type, 150); // Harf chiqish tezligi (millisekundda)
+    }
+}
+
+// Sahifa yuklanganda effektni boshlash
+window.onload = () => {
+    type();
+};
+let score = 0;
+const scoreDisplay = document.getElementById('score');
+const gameBtn = document.getElementById('click-me');
+const congrats = document.getElementById('congrats');
+
+
+gameBtn.addEventListener('click', () => {
+    score++;
+    scoreDisplay.innerText = score;
+
+    // Ranglar ro'yxati
+    const colors = ['#e74c3c', '#2ecc71', '#f1c40f', '#9b59b6', '#3498db', '#ff6b6b', '#1dd1a1'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    
+    // Inline stil orqali rang berish va muhimlik darajasini oshirish
+    gameBtn.style.setProperty('background-color', randomColor, );
+    
+    // Agar 100 ball bo'lsa
+    if (score === 100) {
+        congrats.style.display = 'block';
+        gameBtn.innerText = "YUTDINGIZ! ✨";
+    }
+});
+</script>
+</body>
+</html>
